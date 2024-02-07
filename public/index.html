@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Consulta de Mercadería</title>
+  </head>
+  <body>
+    <h1 id="titulo">Consulte precio aqui</h1>
+    <form id="mercaderiaForm">
+      <input id="mercaderiaId" name="mercaderiaId" required />
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+      document.getElementById('mercaderiaId').focus(); // Iniciar el cursor en el campo de entrada
+      document
+        .getElementById('mercaderiaId')
+        .addEventListener('input', async function () {
+          const mercaderiaId = document.getElementById('mercaderiaId').value;
+          try {
+            const response = await fetch(`/mercaderia/${mercaderiaId}`);
+            const data = await response.json();
+            document.getElementById('resultado').innerHTML =
+              `<div>${data.Nombre}</div><div>$ ${data.Precio}</div>`;
+            document.getElementById('titulo').classList.add('oculto');
+            setTimeout(() => {
+              document.getElementById('titulo').classList.remove('oculto');
+              document.getElementById('mercaderiaId').value = ''; // Limpiar el input después de 6 segundos
+              document.getElementById('resultado').textContent = ''; // Limpiar el resultado después de 6 segundos
+            }, 7000);
+          } catch (error) {
+            console.error('Error al consultar la mercadería:', error);
+            document.getElementById('resultado').textContent =
+              'Error al consultar la mercadería. Por favor, intenta de nuevo más tarde.';
+          }
+        });
+    </script>
+  </body>
+</html>

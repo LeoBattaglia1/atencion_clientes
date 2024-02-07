@@ -1,0 +1,42 @@
+body {
+  background-color: blue;
+  color: white;
+  font-size: 84px;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive; /* Cambiar el tipo de fuente */
+  justify-content: center; /* Alinea verticalmente */
+  margin-top: 150px;
+}
+
+#tirulo {
+  font-size: 76px;
+  justify-content: center; /* Alinea verticalmente */
+}
+
+input {
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+  width: 60%;
+  position: absolute;
+  left: -9999px;
+}
+
+#resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinea verticalmente */
+  align-items: center; /* Alinea horizontalmente */
+  font-size: 120px;
+  color: yellow;
+  margin-top: 100px;
+}
+
+#resultado div {
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive;
+}
+.oculto {
+  display: none;
+}
