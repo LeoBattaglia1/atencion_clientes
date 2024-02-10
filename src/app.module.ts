@@ -13,7 +13,8 @@ import { CajaModule } from './caja/caja.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '192.168.18.215',
+      // host: '192.168.18.215',
+      host: '192.168.18.231',
       port: 3306,
       username: 'root2',
       password: 'root',

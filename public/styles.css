@@ -1,24 +1,24 @@
 body {
   background-color: blue;
   color: white;
-  font-size: 84px;
+  font-size: 50px;
   text-align: center;
   font-family: 'Comic Sans MS', cursive; /* Cambiar el tipo de fuente */
   justify-content: center; /* Alinea verticalmente */
-  margin-top: 150px;
 }
 
 #tirulo {
-  font-size: 76px;
+  margin-top: 150px;
+  font-size: 100px;
   justify-content: center; /* Alinea verticalmente */
 }
 
 input {
   background-color: white;
   color: black;
-  font-size: 24px;
-  padding: 20px;
-  width: 60%;
+  font-size: 14px;
+
+  width: 10%;
   position: absolute;
   left: -9999px;
 }
@@ -28,7 +28,7 @@ input {
   flex-direction: column;
   justify-content: center; /* Alinea verticalmente */
   align-items: center; /* Alinea horizontalmente */
-  font-size: 120px;
+  font-size: 100px;
   color: yellow;
   margin-top: 100px;
 }
